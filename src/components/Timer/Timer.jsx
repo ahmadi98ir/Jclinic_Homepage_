@@ -6,14 +6,14 @@ const Timer = ({ show }) => {
 };
 
 export default Timer;
-// react-countdown
-// react-countdown-now
-// react-timer-hook
+//  react-countdown
+// /react-countdown-now
+// /react-timer-hook
 // structure =>
 // <HStack>
-//   <PinInput defaultValue="234">
-//     <PinInputField />
-//     <PinInputField />
-//     <PinInputField />
-//   </PinInput>
+// <PinInput defaultValue="234">
+// <PinInputField />
+// <PinInputField />
+// <PinInputField />
+// </PinInput>
 // </HStack>;
