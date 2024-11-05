@@ -57,6 +57,8 @@ const TodoList = () => {
       bg={"#13151C"}
       borderRadius={25}
       area={"todo"}
+      w={"100%"}
+      h={"100%"}
     >
       {/* <EditContext.Provider
         value={{

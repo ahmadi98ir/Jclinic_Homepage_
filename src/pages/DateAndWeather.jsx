@@ -101,8 +101,8 @@ const DateAndWeather = () => {
           h={"50%"}
         >
           <Weather
-            pishbiniClickHandler={showPishbiniHandler}
-            pishbini={showDown.pishbini}
+            // pishbiniClickHandler={showPishbiniHandler}
+           // pishbini={showDown.pishbini}
           />
           <DateTime
             timerClickHandler={showTimerHandler}
@@ -118,9 +118,9 @@ const DateAndWeather = () => {
             local={relation.text2}
             holiday={relation.holiday}
           />
-          <Timer show={showDown.timer} />
-          <OghatSharei show={showDown.oghatsharye} />
-          <PishBini show={showDown.pishbini} />
+          {/* <Timer show={showDown.timer} /> */}
+          {/* <OghatSharei show={showDown.oghatsharye} /> */}
+          {/* <PishBini show={showDown.pishbini} /> */}
         </Flex>
       </Flex>
     </GridItem>

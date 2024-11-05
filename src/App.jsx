@@ -30,7 +30,7 @@ function App() {
         <TodoList />
         <Calender />
       </GridHadleing>
-      <Flex justify={'center'} color={'black'} fontSize={'13px'}><Link href="http://ahmadi98.ir" target="_blank" >Develop By Mahdi Ahmadi</Link></Flex>
+      <Flex justify={'center'}  color={'black'} fontSize={'17px'}><Link href="http://ahmadi98.ir" background={'white'} fontWeight={'bold'} padding={'5px'} borderRadius={'50px'} target="_blank" >Develop By Mahdi Ahmadi</Link></Flex>
     </BgLayout>
   );
 }

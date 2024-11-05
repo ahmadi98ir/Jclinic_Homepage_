@@ -9,7 +9,8 @@ const BgLayout = (props) => {
       // pos={"absolute"}
       // top={0}
       // left={0}
-      bgColor={"#FFFFFF	"}
+      //bgColor={"#FFFFFF	"}
+      
       maxW={"container.xl"}
       mx={"auto"}
     >

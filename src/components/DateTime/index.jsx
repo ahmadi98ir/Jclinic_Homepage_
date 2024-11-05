@@ -35,7 +35,7 @@ export default function DateTime({
         {toPersianDigit(moment().locale("fa").format("dddd، DD MMMM"))}
       </Text>
 
-      <Flex
+      {/* <Flex
         gap={2}
         color="#747785"
         alignItems="center"
@@ -48,10 +48,10 @@ export default function DateTime({
         <Text fontSize={10}>
           {toPersianDigit(gregorianToHijri(new Date()))}
         </Text>
-      </Flex>
+      </Flex> */}
       {/* وسط بودن المان ها را به هم میریزد */}
       <Flex justifyContent="center" alignItems="center" gap={2}>
-        <Button
+        {/* <Button
           leftIcon={oghat ? <IoIosArrowUp /> : <IoIosArrowDown />}
           colorScheme="blue"
           variant="outline"
@@ -68,9 +68,9 @@ export default function DateTime({
           onClick={oghatClickHandler}
         >
           اوقات شرعی
-        </Button>
+        </Button> */}
 
-        <Button
+        {/* <Button
           leftIcon={timer ? <IoIosArrowUp /> : <IoIosArrowDown />}
           colorScheme="blue"
           variant="outline"
@@ -87,7 +87,7 @@ export default function DateTime({
           onClick={timerClickHandler}
         >
           تایمر
-        </Button>
+        </Button> */}
       </Flex>
     </Flex>
   );

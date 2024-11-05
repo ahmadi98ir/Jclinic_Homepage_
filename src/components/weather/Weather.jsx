@@ -49,7 +49,7 @@ const Weather = ({ pishbiniClickHandler, pishbini }) => {
       <Flex justifyContent={"center"} alignItems={"center"}>
        
       </Flex>
-      <Flex
+      {/* <Flex
         justifyContent={"center"}
         alignItems={"center"}
         w={"100%"}
@@ -70,8 +70,8 @@ const Weather = ({ pishbiniClickHandler, pishbini }) => {
             {temp.maxTemp}°
           </Text>
         </Flex>
-      </Flex>
-      <Button
+      </Flex> */}
+      {/* <Button
         h={8}
         bg={pishbini ? "#3D518F" : "inherit"}
         border={pishbini ? "none" : "1px solid #3D404D"}
@@ -88,7 +88,7 @@ const Weather = ({ pishbiniClickHandler, pishbini }) => {
       >
         {pishbini ? <IoIosArrowUp /> : <IoIosArrowDown />}
         پیش بینی
-      </Button>
+      </Button> */}
     </Flex>
   );
 };
