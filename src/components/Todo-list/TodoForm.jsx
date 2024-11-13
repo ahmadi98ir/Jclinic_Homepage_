@@ -27,7 +27,7 @@ const Todo = (props) => {
     <form onSubmit={handleSubmit}>
       <Flex
         py={6}
-        h={{ base: "400px", xl: "700px" }}
+        h={{ base: "600px", xl: "700px" }}
         w={"100%"}
         direction={"column"}
         justifyContent={"start"}

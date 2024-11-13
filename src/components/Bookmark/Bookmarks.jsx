@@ -11,6 +11,9 @@ const BookMark = () => {
     { href: "https://www.example4.com/", text: " سامانه ماد", imgSrc: "./logo-mini-mad.png" },
     { href: "https://www.example5.com/", text: "خدمات پرسنلی", imgSrc: "./logo5logo-mini-mad.png" },
     { href: "https://www.example6.com/", text: "سایت 6", imgSrc: "./logo6.png" },
+    { href: "https://www.example7.com/", text: "سایت 7", imgSrc: "./logo7.png" },
+    { href: "https://www.example5.com/", text: "خدمات پرسنلی", imgSrc: "./logo5logo-mini-mad.png" },
+    { href: "https://www.example6.com/", text: "سایت 6", imgSrc: "./logo6.png" },
     { href: "https://www.example7.com/", text: "سایت 7", imgSrc: "./logo7.png" }
   ];
 

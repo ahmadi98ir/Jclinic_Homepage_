@@ -16,7 +16,7 @@ const Navbar = () => {
       >
          
         <Flex gap={2} alignItems={"center"}>
-          <img width={200} height={100} src="/logo.png" />
+          <img width={200} height={80} src="/logo.png" />
         </Flex>
       </Flex>
     </Box>

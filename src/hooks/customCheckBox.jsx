@@ -10,7 +10,7 @@ function Example() {
         display="flex"
         flexDirection="row"
         alignItems="center"
-        gridColumnGap={2}
+        gridColumnGap={1}
         maxW="36"
         bg="green.50"
         border="1px solid"
@@ -31,7 +31,7 @@ function Example() {
           h={4}
           {...getCheckboxProps()}
         >
-          {state.isChecked && <Box w={2} h={2} bg="green.500" />}
+          {state.isChecked && <Box w={2} h={1} bg="green.500" />}
         </Flex>
         <Text color="gray.700" {...getLabelProps()}>
           Click me

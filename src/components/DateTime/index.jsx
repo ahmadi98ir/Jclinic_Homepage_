@@ -14,7 +14,7 @@ export default function DateTime({
 }) {
   return (
     <Flex
-      p={3}
+      p={2}
       w="50%"
       flex={1}
       direction="column"
@@ -31,7 +31,7 @@ export default function DateTime({
         {toPersianDigit(moment().format("HH:mm"))}
       </Heading>
 
-      <Text my={3} fontWeight="bold" fontSize={14} color={"#E8ECFD"}>
+      <Text my={3} fontWeight="bold" fontSize={20} color={"#E8ECFD"}>
         {toPersianDigit(moment().locale("fa").format("dddd، DD MMMM"))}
       </Text>
 

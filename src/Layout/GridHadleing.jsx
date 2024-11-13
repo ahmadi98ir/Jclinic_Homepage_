@@ -40,7 +40,7 @@ const GridHadleing = (props) => {
       templateColumns={templateColumns}
       // templateRows={{ xl: "1fr 1fr  3fr  4fr" }}
       gap={3}
-      h={"100%"}
+      h={"80%"}
       mx={"auto"}
       justifyContent={"center"}
       alignItems={"center"}

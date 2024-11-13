@@ -3,9 +3,7 @@ import { useEffect, useState } from "react";
 import DastyarEvent from "../components/dastyar-event/DastyarEvent";
 import Weather from "../components/weather/Weather";
 import DateTime from "../components/DateTime";
-import Timer from "../components/Timer/Timer";
-import OghatSharei from "../components/oghatSharie/OghatSharei";
-import PishBini from "../components/weather/PishBini";
+
 
 const DateAndWeather = () => {
   const [relation, setRelation] = useState({
@@ -53,36 +51,36 @@ const DateAndWeather = () => {
     return () => clearInterval(intervalId);
   });
   // toggles for showing  components for timer oghat sharye and pishbini
-  const showTimerHandler = () => {
-    setShowDown((prevstate) => ({
-      dastEvents: !prevstate.timer ? false : !prevstate.dastEvents,
-      timer: !prevstate.timer,
-      oghatsharye: false,
-      pishbini: false,
-    }));
-  };
-  const showOghatHandler = () => {
-    setShowDown((prevstate) => ({
-      dastEvents: !prevstate.oghatsharye ? false : !prevstate.dastEvents,
-      timer: false,
-      oghatsharye: !prevstate.oghatsharye,
-      pishbini: false,
-    }));
-  };
-  const showPishbiniHandler = () => {
-    setShowDown((prevstate) => ({
-      dastEvents: !prevstate.pishbini ? false : !prevstate.dastEvents,
-      timer: false,
-      oghatsharye: false,
-      pishbini: !prevstate.pishbini,
-    }));
-  };
+  // const showTimerHandler = () => {
+  //   setShowDown((prevstate) => ({
+  //     dastEvents: !prevstate.timer ? false : !prevstate.dastEvents,
+  //     timer: !prevstate.timer,
+  //     oghatsharye: false,
+  //     pishbini: false,
+  //   }));
+  // };
+  // const showOghatHandler = () => {
+  //   setShowDown((prevstate) => ({
+  //     dastEvents: !prevstate.oghatsharye ? false : !prevstate.dastEvents,
+  //     timer: false,
+  //     oghatsharye: !prevstate.oghatsharye,
+  //     pishbini: false,
+  //   }));
+  // };
+  // const showPishbiniHandler = () => {
+  //   setShowDown((prevstate) => ({
+  //     dastEvents: !prevstate.pishbini ? false : !prevstate.dastEvents,
+  //     timer: false,
+  //     oghatsharye: false,
+  //     pishbini: !prevstate.pishbini,
+  //   }));
+  // };
   return (
     <GridItem
-      // rowSpan={6}
-      // colSpan={3}
+       rowSpan={2}
+       colSpan={1}
       w={"100%"}
-      h={"50%"}
+      h={"100%"}
       alignContent={"end"}
       bg={"rgb(19 ,21 ,28)"}
       borderRadius={25}
@@ -112,12 +110,9 @@ const DateAndWeather = () => {
             // oghat={showDown.oghatsharye}
           />
         </Flex>
-        <Flex flex={1} h={{ base: "10%", lg: "10%" }}>
+        <Flex flex={1} h={{ base: "40%", lg: "40%" }}>
           <DastyarEvent
-            show={showDown.dastEvents}
-            global={relation.text1}
-            local={relation.text2}
-            holiday={relation.holiday}
+          
           />
           {/* <Timer show={showDown.timer} /> */}
           {/* <OghatSharei show={showDown.oghatsharye} /> */}
