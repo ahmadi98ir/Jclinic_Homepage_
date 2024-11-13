@@ -8,8 +8,8 @@ const BookMark = () => {
     { href: "https://ep.tamin.ir/", text: "تامین اجتماعی", imgSrc: "./logo-mini-Tamin.png" },
     { href: "https://eservices.ihio.gov.ir/sso/?sourceApp=https://eservices.ihio.gov.ir/ihioerx/", text: "بیمه سلامت", imgSrc: "./logo-mini-khadamat.png" },
     { href: "https://esakhad.esata.ir:9092/authentication/login", text: "بیمه نیروهای مسلح", imgSrc: "./logo-mini-sakhad.png" },
-    { href: "https://www.example4.com/", text: "سایت 4", imgSrc: "./logo-mini-mad.png" },
-    { href: "https://www.example5.com/", text: "سایت 5", imgSrc: "./logo5logo-mini-mad.png" },
+    { href: "https://www.example4.com/", text: " سامانه ماد", imgSrc: "./logo-mini-mad.png" },
+    { href: "https://www.example5.com/", text: "خدمات پرسنلی", imgSrc: "./logo5logo-mini-mad.png" },
     { href: "https://www.example6.com/", text: "سایت 6", imgSrc: "./logo6.png" },
     { href: "https://www.example7.com/", text: "سایت 7", imgSrc: "./logo7.png" }
   ];

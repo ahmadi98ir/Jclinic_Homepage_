@@ -11,7 +11,7 @@ const Weather = ({ pishbiniClickHandler, pishbini }) => {
   });
 
   const APIKey = "c42c5f0c9b3b2fd8095f2882a3da19d4";
-  const city = "ahvaz";
+  const city = "tehran";
 
   // it's will run for one time
   useEffect(() => {
@@ -32,21 +32,21 @@ const Weather = ({ pishbiniClickHandler, pishbini }) => {
     <Flex
       flex={1}
       direction={"column"}
-      paddingY={4}
-      paddingX={3}
+      paddingY={3}
+      paddingX={2}
       justifyContent={"space-around"}
       alignItems={"center"}
       borderRight={{ base: "1px solid #ffffffff", lg: "none" }}
-      w={"50%"}
+      w={"30%"}
     >
       <Heading mx={"auto"}>
         <Flex>
-          <Box>🌱</Box>
+          <Box alignItems={"start"} fontSize={"32px"}>📍افسریه جنوبی</Box>
           <Box color={"#E8ECFD"}>{Math.floor(temp.temp)}°</Box>
         </Flex>
       </Heading>
 
-      <Flex justifyContent={"center"} alignItems={"center"}>
+      <Flex justifyContent={"centerr"} alignItems={"center"}>
        
       </Flex>
       {/* <Flex

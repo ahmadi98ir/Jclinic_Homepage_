@@ -20,14 +20,14 @@ const DateAndWeather = () => {
     pishbini: false,
   });
 
-  // request for Api
+  //request for Api
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch("https://api.keybit.ir/time/");
         if (response.ok) {
           const result = await response.json();
-          // console.log(result.date);
+          console.log(result.date);
           setRelation({
             text1: result.date.day.events.global
               ? result.date.day.events.global.text
@@ -47,7 +47,7 @@ const DateAndWeather = () => {
       }
     };
 
-    // repeat request
+  // repeat request
     const intervalId = setInterval(fetchData, 1000);
 
     return () => clearInterval(intervalId);
@@ -82,7 +82,8 @@ const DateAndWeather = () => {
       // rowSpan={6}
       // colSpan={3}
       w={"100%"}
-      h={"100%"}
+      h={"50%"}
+      alignContent={"end"}
       bg={"rgb(19 ,21 ,28)"}
       borderRadius={25}
       area={"time"}
@@ -105,13 +106,13 @@ const DateAndWeather = () => {
            // pishbini={showDown.pishbini}
           />
           <DateTime
-            timerClickHandler={showTimerHandler}
-            oghatClickHandler={showOghatHandler}
-            timer={showDown.timer}
-            oghat={showDown.oghatsharye}
+            // timerClickHandler={showTimerHandler}
+            // oghatClickHandler={showOghatHandler}
+            // timer={showDown.timer}
+            // oghat={showDown.oghatsharye}
           />
         </Flex>
-        <Flex flex={1} h={{ base: "50%", lg: "100%" }}>
+        <Flex flex={1} h={{ base: "10%", lg: "10%" }}>
           <DastyarEvent
             show={showDown.dastEvents}
             global={relation.text1}
