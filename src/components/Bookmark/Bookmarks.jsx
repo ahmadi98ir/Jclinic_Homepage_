@@ -20,7 +20,7 @@ const BookMark = () => {
   return (
     <GridItem area={"boxplus"} w={"100%"} flexWrap={"wrap"}>
       <Grid
-        templateColumns={{ base: "repeat(2, 1fr)", lg: "repeat(4, 1fr)" }}
+        templateColumns={{ base: "repeat(2, 1fr)", lg: "repeat(5, 1fr)" }}
         w={"100%"}
         flexWrap={"wrap"}
         dir="rtl"
