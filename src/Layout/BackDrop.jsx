@@ -10,7 +10,7 @@ const BackDrop = ({ show, toggle }) => {
       top={0}
       left={0}
       w={"100%"}
-      h={"80%"}
+      h={"100%"}
       zIndex={12}
     ></Box>
   );

@@ -14,7 +14,7 @@ export default function DateTime({
 }) {
   return (
     <Flex
-      p={2}
+      p={4}
       w="50%"
       flex={1}
       direction="column"

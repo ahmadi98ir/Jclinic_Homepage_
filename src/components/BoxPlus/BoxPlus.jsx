@@ -15,7 +15,7 @@ const BoxPlus = ({ icon, text, isActive, onClick }) => {
       m={0}
       overflow={"hidden"}
       w={"100%"}
-      h="77px"
+      h="20px"
       cursor={"pointer"}
     >
       {/* first show */}

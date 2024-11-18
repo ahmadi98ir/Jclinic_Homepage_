@@ -4,13 +4,13 @@ import DastyarEvent from "../components/dastyar-event/DastyarEvent";
 import Weather from "../components/weather/Weather";
 import DateTime from "../components/DateTime";
 
-
 const DateAndWeather = () => {
   const [relation, setRelation] = useState({
     text1: null,
     text2: null,
     holiday: false,
   });
+
   const [showDown, setShowDown] = useState({
     dastEvents: true,
     timer: false,
@@ -18,24 +18,17 @@ const DateAndWeather = () => {
     pishbini: false,
   });
 
-  //request for Api
+  // Request for API
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch("https://api.keybit.ir/time/");
         if (response.ok) {
           const result = await response.json();
-          console.log(result.date);
           setRelation({
-            text1: result.date.day.events.global
-              ? result.date.day.events.global.text
-              : null,
-            text2: result.date.day.events.local
-              ? result.date.day.events.local.text
-              : null,
-            holiday: result.date.day.events.local
-              ? result.date.day.events.local.holiday
-              : null,
+            text1: result.date.day.events.global ? result.date.day.events.global.text : null,
+            text2: result.date.day.events.local ? result.date.day.events.local.text : null,
+            holiday: result.date.day.events.local ? result.date.day.events.local.holiday : null,
           });
         } else {
           console.error("Error fetching data:", response.status);
@@ -45,47 +38,22 @@ const DateAndWeather = () => {
       }
     };
 
-  // repeat request
+    // Repeat request
     const intervalId = setInterval(fetchData, 1000);
-
     return () => clearInterval(intervalId);
-  });
-  // toggles for showing  components for timer oghat sharye and pishbini
-  // const showTimerHandler = () => {
-  //   setShowDown((prevstate) => ({
-  //     dastEvents: !prevstate.timer ? false : !prevstate.dastEvents,
-  //     timer: !prevstate.timer,
-  //     oghatsharye: false,
-  //     pishbini: false,
-  //   }));
-  // };
-  // const showOghatHandler = () => {
-  //   setShowDown((prevstate) => ({
-  //     dastEvents: !prevstate.oghatsharye ? false : !prevstate.dastEvents,
-  //     timer: false,
-  //     oghatsharye: !prevstate.oghatsharye,
-  //     pishbini: false,
-  //   }));
-  // };
-  // const showPishbiniHandler = () => {
-  //   setShowDown((prevstate) => ({
-  //     dastEvents: !prevstate.pishbini ? false : !prevstate.dastEvents,
-  //     timer: false,
-  //     oghatsharye: false,
-  //     pishbini: !prevstate.pishbini,
-  //   }));
-  // };
+  }, []);
+
   return (
     <GridItem
-       rowSpan={2}
-       colSpan={1}
+      rowSpan={1}
+      colSpan={1}
       w={"100%"}
       h={"100%"}
       alignContent={"end"}
       bg={"rgb(19 ,21 ,28)"}
       borderRadius={25}
       area={"time"}
-      // zIndex={-1}
+      marginBottom={-4}  // تنظیم فاصله منفی از پایین
     >
       <Flex
         direction={{ base: "column", lg: "row", xl: "column" }}
@@ -95,28 +63,12 @@ const DateAndWeather = () => {
         <Flex
           flex={1}
           direction={"row"}
-          borderBottom={{ base: "1px solid #eef0f512", lg: "none" }}
+          borderBottom={{ base: "1px solid #eef0f512", lg: "0" }}
           maxW={"100%"}
-          h={"50%"}
+          h={"100%"}
         >
-          <Weather
-            // pishbiniClickHandler={showPishbiniHandler}
-           // pishbini={showDown.pishbini}
-          />
-          <DateTime
-            // timerClickHandler={showTimerHandler}
-            // oghatClickHandler={showOghatHandler}
-            // timer={showDown.timer}
-            // oghat={showDown.oghatsharye}
-          />
-        </Flex>
-        <Flex flex={1} h={{ base: "40%", lg: "40%" }}>
-          <DastyarEvent
-          
-          />
-          {/* <Timer show={showDown.timer} /> */}
-          {/* <OghatSharei show={showDown.oghatsharye} /> */}
-          {/* <PishBini show={showDown.pishbini} /> */}
+          <Weather />
+          <DateTime />
         </Flex>
       </Flex>
     </GridItem>

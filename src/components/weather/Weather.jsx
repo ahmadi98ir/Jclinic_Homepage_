@@ -1,6 +1,5 @@
 import { Box, Button, Flex, Heading, Text } from "@chakra-ui/react";
-import { IoIosArrowDown } from "react-icons/io";
-import { IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import React, { useEffect, useState } from "react";
 
 const Weather = ({ pishbiniClickHandler, pishbini }) => {
@@ -13,7 +12,6 @@ const Weather = ({ pishbiniClickHandler, pishbini }) => {
   const APIKey = "c42c5f0c9b3b2fd8095f2882a3da19d4";
   const city = "tehran";
 
-  // it's will run for one time
   useEffect(() => {
     fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`
@@ -32,31 +30,29 @@ const Weather = ({ pishbiniClickHandler, pishbini }) => {
     <Flex
       flex={1}
       direction={"column"}
-      paddingY={3}
+      paddingY={5}
       paddingX={2}
       justifyContent={"space-around"}
       alignItems={"center"}
       borderRight={{ base: "1px solid #ffffffff", lg: "none" }}
-      w={"30%"}
+      w={"90%"}  // پهن‌تر شدن کامپوننت
+      mr={"-5px"}  // کاهش فاصله از سمت چپ
     >
       <Heading mx={"auto"}>
         <Flex>
-          <Box alignItems={"start"} fontSize={"32px"}>📍افسریه جنوبی</Box>
-          <Box color={"#E8ECFD"}>{Math.floor(temp.temp)}°</Box>
+          <Box alignItems={"start"} fontSize={"22px"}>📍افسریه جنوبی</Box>
+          <Box color={"#E8ECFD"} ml={2}>{Math.floor(temp.temp)}°</Box>
         </Flex>
       </Heading>
 
-      <Flex justifyContent={"centerr"} alignItems={"center"}>
-       
-      </Flex>
-      {/* <Flex
+      <Flex
         justifyContent={"center"}
         alignItems={"center"}
         w={"100%"}
         fontSize={13}
         gap={2}
         color={"#747785"}
-        mt={4}
+        mt={2}
       >
         <Flex>
           <Text>حداقل</Text>
@@ -70,8 +66,9 @@ const Weather = ({ pishbiniClickHandler, pishbini }) => {
             {temp.maxTemp}°
           </Text>
         </Flex>
-      </Flex> */}
-      {/* <Button
+      </Flex>
+
+      <Button
         h={8}
         bg={pishbini ? "#3D518F" : "inherit"}
         border={pishbini ? "none" : "1px solid #3D404D"}
@@ -87,8 +84,8 @@ const Weather = ({ pishbiniClickHandler, pishbini }) => {
         onClick={pishbiniClickHandler}
       >
         {pishbini ? <IoIosArrowUp /> : <IoIosArrowDown />}
-        پیش بینی
-      </Button> */}
+        تازه سازی
+      </Button>
     </Flex>
   );
 };

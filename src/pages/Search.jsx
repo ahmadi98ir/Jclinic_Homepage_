@@ -15,8 +15,8 @@ const Search = () => {
   };
   
   return (
-    <GridItem w={"100%"} area={"search"} mx={"auto"}>
-      <Grid gap={2} w={"100%"} h={"100%"}>
+    <GridItem w={"0%"} area={"search"} mx={"auto"}>
+      <Grid gap={0} w={"0%"} h={"0%"}>
         <SearchBox setShow={showHandler} show={show} />
         {show ? <SuggestionTools /> : null}
       </Grid>

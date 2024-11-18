@@ -8,12 +8,12 @@ const Calender = () => {
 
   return (
     <GridItem
-      // rowSpan={8}
+      rowSpan={8}
       // colSpan={3}
       w={"100%"}
-      h={"100%"}
+      h={"80%"}
       bg={"#13151C"}
-      borderRadius={25}
+      borderRadius={35}
       area={"calender"}
     >
       <Calendar

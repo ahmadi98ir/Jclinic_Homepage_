@@ -1,4 +1,4 @@
-import { Flex, Grid, GridItem, Link } from "@chakra-ui/react";
+import { Flex, Grid, GridItem, Link, Box } from "@chakra-ui/react";
 import React from "react";
 
 const BookMark = () => {
@@ -8,52 +8,62 @@ const BookMark = () => {
     { href: "https://ep.tamin.ir/", text: "تامین اجتماعی", imgSrc: "./logo-mini-Tamin.png" },
     { href: "https://eservices.ihio.gov.ir/sso/?sourceApp=https://eservices.ihio.gov.ir/ihioerx/", text: "بیمه سلامت", imgSrc: "./logo-mini-khadamat.png" },
     { href: "https://esakhad.esata.ir:9092/authentication/login", text: "بیمه نیروهای مسلح", imgSrc: "./logo-mini-sakhad.png" },
-    { href: "https://www.example4.com/", text: " سامانه ماد", imgSrc: "./logo-mini-mad.png" },
-    { href: "https://www.example5.com/", text: "خدمات پرسنلی", imgSrc: "./logo5logo-mini-mad.png" },
-    { href: "https://www.example6.com/", text: "سایت 6", imgSrc: "./logo6.png" },
-    { href: "https://www.example7.com/", text: "سایت 7", imgSrc: "./logo7.png" },
-    { href: "https://www.example5.com/", text: "خدمات پرسنلی", imgSrc: "./logo5logo-mini-mad.png" },
-    { href: "https://www.example6.com/", text: "سایت 6", imgSrc: "./logo6.png" },
-    { href: "https://www.example7.com/", text: "سایت 7", imgSrc: "./logo7.png" }
+    { href: "http://192.168.1.70/MedalWeb/Login.aspx?url=Default.aspx/", text: "PACS سامانه ", imgSrc: "./logo-mini-pacs.png" },
+    { href: "http://192.168.1.40/login", text: "وب کارت", imgSrc: "./logo-mini-webcard.png" },
+    { href: "https://account.iraninsurance.ir/users/login/referrer/73736f2f6f6964632f63616c6c6261636b2f63616e63656c2f312e68746d6c.html", text: "بیمه ایران", imgSrc: "./logo-mini-iran.png" },
+    { href: "https://totalapp2.dana-insurance.ir/Sepad1/Security/Index?ReturnUrl=%2fsepad1%2f", text: "بیمه دانا", imgSrc: "./logo-mini-dana.png" },
+    { href: "https://mccp.iraneit.com/#/login/", text: "سامانه ماد", imgSrc: "./logo-mini-mad.png" }
   ];
 
   return (
     <GridItem area={"boxplus"} w={"100%"} flexWrap={"wrap"}>
       <Grid
-        templateColumns={{ base: "repeat(2, 1fr)", lg: "repeat(5, 1fr)" }}
+        templateColumns={{ base: "repeat(3, 1fr)", lg: "repeat(5, 1fr)" }}
         w={"100%"}
-        flexWrap={"wrap"}
+        gap={4} // فاصله بین ستون‌ها و ردیف‌ها
         dir="rtl"
-        gap={1}
       >
         {boxData.map((box, index) => (
-          <Flex
+          <Box
             key={index}
             bg={"#1A1D26"}
-            borderRadius={8}
+            borderRadius="8px"
             color={"#BABDC6"}
-            p={0}
-            m={0}
-            overflow={"hidden"}
-            w={"100%"}
-            h="180px"
+            p={4} // افزایش فاصله داخلی
             cursor={"pointer"}
-            justify={"center"}
-            align={"center"}
-            fontSize={"15px"}
+            display={"flex"}
+            flexDirection={"column"}
+            alignItems={"center"}
+            justifyContent={"center"}
+            textAlign={"center"}
+            h="220px" // افزایش ارتفاع
+            w="100%" // استفاده کامل از فضای ستون
           >
             <Link
-              justifyContent={"center"}
-              justifyItems={"center"}
               href={box.href}
               target="_blank"
+              aria-label={box.text}
             >
-              <Flex height={"100px"} width={"100px"} marginX={'auto'} justify={'center'} justifyItems={'center'} background={'white'} borderRadius={'full'}>
-                <img height={"100px"} width={"100px"} src={box.imgSrc} alt={box.text} style={{objectFit:'contain'}} />
+              <Flex
+                height="120px" // افزایش ارتفاع دایره عکس
+                width="120px" // افزایش عرض دایره عکس
+                bg="white"
+                borderRadius="full"
+                align="center"
+                justify="center"
+                overflow="hidden"
+              >
+                <img
+                  src={box.imgSrc}
+                  alt={box.text}
+                  style={{ height: "100%", width: "100%", objectFit: "contain" }}
+                />
               </Flex>
-              <Flex marginTop={"15px"}>{box.text}</Flex>
+              <Box mt="10px" fontSize="16px"> {/* اندازه فونت را هم کمی بزرگ‌تر کنید */}
+                {box.text}
+              </Box>
             </Link>
-          </Flex>
+          </Box>
         ))}
       </Grid>
     </GridItem>
